@@ -21,6 +21,8 @@
     "@cycle/web": "^2.2.1"
   },
   "devDependencies": {
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.1.0"
   }
