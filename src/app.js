@@ -2,22 +2,24 @@
 import Cycle from '@cycle/core';
 import {makeDOMDriver, hJSX} from '@cycle/dom';
 
-function main(drivers) {
-  return {
-    DOM: drivers.DOM.get('input', 'click')
-      .map(ev => ev.target.checked)
+function main(responses) {
+  let requests = {
+    DOM: responses.DOM.get('paper-checkbox', 'change')
+      .map(function(ev)
+      {
+      	return ev.target.checked;
+      })
       .startWith(false)
       .map(toggled =>
         <div>
           <h2>toggled: {toggled ? 'true' : 'false'}</h2>
-          <paper-checkbox toggled={toggled ? 'true' : 'false'}></paper-checkbox>
+          <paper-checkbox toggled={toggled}>{toggled ? 'ON' : 'Off'}</paper-checkbox>
         </div>
       )
   };
+  return requests;
 }
 
-let drivers = {
+Cycle.run(main, {
   DOM: makeDOMDriver('#app')
-};
-
-Cycle.run(main, drivers);
+});
