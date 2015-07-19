@@ -2,8 +2,11 @@
 <head>
 <title>Cycle and Material</title>
 
-<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js">
+<script src="bower_components/webcomponentsjs/webcomponents.min.js">
     </script>
+
+    <link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
 
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-input/paper-input.html">
@@ -13,7 +16,29 @@
     <link href="bower_components/iron-icons/iron-icons.html" rel="import">
     <link rel="import" href="bower_components/paper-item/paper-item.html">
     <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
 
+    <style>
+      .cow {
+      /* layout properties for a local DOM element */
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+        border: 1px;
+        border-color: #FF0000;
+        display: flex; 
+      }
+
+      .checkboxPadding
+      {
+        width: 2em;
+        height: 2em;
+      }
+
+      .paperPadding {
+        padding: 2em;
+        margin: 2em;
+      }
+    </style>
 </head>
 <body class="fullbleed layout vertical">
 
@@ -24,36 +49,45 @@
       <!-- <paper-icon-button icon="favorite"></paper-icon-button> -->
     </paper-toolbar>
     <div id="app"></div>
-    <div class="list short">
 
-      <paper-icon-item>
-        <paper-checkbox></paper-checkbox>
-        <div class="flex">Test</div>
-      </paper-icon-item>
+    <paper-material class="paperPadding">
 
-      <paper-icon-item>
-        <paper-checkbox></paper-checkbox>
-        <div class="flex">Test</div>
-      </paper-icon-item>
+      <div class="list short">
 
-      <paper-icon-item>
-        <paper-checkbox></paper-checkbox>
-        <div class="flex">Test</div>
-      </paper-icon-item>
+        <paper-icon-item class="cow">
+          <paper-checkbox class="checkboxPadding"></paper-checkbox>
+          <div class="flex">Test</div>
+        </paper-icon-item>
 
-      <paper-icon-item>
-        <paper-checkbox></paper-checkbox>
-        <div class="flex">Test</div>
-      </paper-icon-item>
-      
+        <paper-icon-item class="cow">
+          <paper-checkbox class="checkboxPadding"></paper-checkbox>
+          <div class="flex">Test</div>
+        </paper-icon-item>
 
+        <paper-icon-item class="cow">
+          <paper-checkbox class="checkboxPadding"></paper-checkbox>
+          <div class="flex">Test</div>
+        </paper-icon-item>
 
-    </div>
+        <paper-icon-item class="cow">
+          <paper-checkbox class="checkboxPadding"></paper-checkbox>
+          <div class="flex">Test</div>
+        </paper-icon-item>
+
+      </div>
+
+     </paper-material>
+
   </paper-header-panel>
 
-
+  <div class="cow" style="width: 400px;">
+      <div>Uno</div>
+      <div>Dos</div>
+      <div>Tres</div>
+    </div>
   
   <script src="bundle.js"></script>
+
 
 </body>
 </html>
