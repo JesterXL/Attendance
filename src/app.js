@@ -1,17 +1,22 @@
+/** @jsx hJSX */
 import Cycle from '@cycle/core';
-import CycleWeb from '@cycle/web';
+import {makeDOMDriver, hJSX} from '@cycle/dom';
 
-function main() {
+function main(drivers) {
   return {
-    DOM: Cycle.Rx.Observable.interval(1000)
-      .map(i => CycleWeb.h(
-        'h1', '' + i + ' seconds elapsed'
-      ))
+    DOM: drivers.DOM.get('input', 'click')
+      .map(ev => ev.target.checked)
+      .startWith(false)
+      .map(toggled =>
+        <div>
+          <paper-checkbox toggled={toggled ? 'false' : 'true'}></paper-checkbox>
+        </div>
+      )
   };
 }
 
 let drivers = {
-  DOM: CycleWeb.makeDOMDriver('#app')
+  DOM: makeDOMDriver('#app')
 };
 
 Cycle.run(main, drivers);
