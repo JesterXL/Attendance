@@ -16,7 +16,7 @@
   "dependencies": {
     "iron-a11y-keys": "PolymerElements/iron-a11y-keys#^1.0.0",
     "iron-ajax": "PolymerElements/iron-ajax#^1.0.0",
-    "paper-button": "PolymerElements/paper-button#^1.0.0",
+    "paper-button": "PolymerElements/paper-button#~1.0.3",
     "iron-elements": "PolymerElements/iron-elements#~1.0.2",
     "paper-input": "PolymerElements/paper-input#~1.0.6",
     "paper-header-panel": "PolymerElements/paper-header-panel#~1.0.2",
