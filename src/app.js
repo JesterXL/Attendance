@@ -9,7 +9,8 @@ function main(drivers) {
       .startWith(false)
       .map(toggled =>
         <div>
-          <paper-checkbox toggled={toggled ? 'false' : 'true'}></paper-checkbox>
+          <h2>toggled: {toggled ? 'true' : 'false'}</h2>
+          <paper-checkbox toggled={toggled ? 'true' : 'false'}></paper-checkbox>
         </div>
       )
   };
