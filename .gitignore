@@ -8,3 +8,5 @@ packages
 pubspec.lock
 
 /bower_components/
+
+/node_modules/

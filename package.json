@@ -1,0 +1,29 @@
+{
+  "name": "Attendance",
+  "version": "1.0.0",
+  "description": "Web application to take class attendence. Excuse to play with Material Design and Dart.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JesterXL/Attendence.git"
+  },
+  "author": "Jesse Warden <jesse@jessewarden.com> (https://jessewarden.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JesterXL/Attendence/issues"
+  },
+  "homepage": "https://github.com/JesterXL/Attendence",
+  "dependencies": {
+    "@cycle/core": "^1.0.1",
+    "@cycle/web": "^2.2.1"
+  },
+  "devDependencies": {
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0"
+  }
+}
